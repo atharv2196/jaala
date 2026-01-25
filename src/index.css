@@ -1,0 +1,71 @@
+:root {
+  --black: #0a0a0a;
+  --black-soft: #141414;
+  --black-light: #1a1a1a;
+  --gold: #c9a227;
+  --gold-light: #d4af37;
+  --gold-dark: #a67c00;
+  --gold-muted: #8b7355;
+  --cream: #f5f0e6;
+  --white: #fafafa;
+  --font-display: 'Cinzel', serif;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--black);
+  color: var(--cream);
+  overflow-x: hidden;
+}
+
+/* Custom cursor - hide default when our cursor is active (desktop only) */
+body.cursor-active,
+body.cursor-active * {
+  cursor: none !important;
+}
+
+a, button {
+  cursor: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Selection */
+::selection {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* Scrollbar - premium minimal */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}

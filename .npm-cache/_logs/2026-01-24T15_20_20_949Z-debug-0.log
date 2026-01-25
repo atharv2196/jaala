@@ -1,0 +1,52 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.3
+2 info using node@v22.19.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:E:\sem3 break\jaala\.npmrc
+5 silly config load:file:C:\Users\Atharva\.npmrc
+6 silly config load:file:C:\Users\Atharva\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install" "--cache" "./.npm-cache"
+9 verbose logfile logs-max:10 dir:E:\sem3 break\jaala\.npm-cache\_logs\2026-01-24T15_20_20_949Z-
+10 verbose logfile E:\sem3 break\jaala\.npm-cache\_logs\2026-01-24T15_20_20_949Z-debug-0.log
+11 silly logfile done cleaning log files
+12 http fetch GET https://registry.npmjs.org/npm attempt 1 failed with ECONNREFUSED
+13 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+14 silly idealTree buildDeps
+15 silly fetch manifest react@^18.2.0
+16 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+17 silly fetch manifest react-dom@^18.2.0
+18 silly packumentCache full:https://registry.npmjs.org/react-dom cache-miss
+19 silly fetch manifest framer-motion@^11.0.0
+20 silly packumentCache full:https://registry.npmjs.org/framer-motion cache-miss
+21 silly fetch manifest @vitejs/plugin-react@^4.2.1
+22 silly packumentCache full:https://registry.npmjs.org/@vitejs%2fplugin-react cache-miss
+23 silly fetch manifest vite@^5.0.0
+24 silly packumentCache full:https://registry.npmjs.org/vite cache-miss
+25 silly placeDep ROOT @vitejs/plugin-react@ OK for: jaala@1.0.0 want: ^4.2.1
+26 silly placeDep ROOT framer-motion@ OK for: jaala@1.0.0 want: ^11.0.0
+27 silly placeDep ROOT react@ OK for: jaala@1.0.0 want: ^18.2.0
+28 silly placeDep ROOT react-dom@ OK for: jaala@1.0.0 want: ^18.2.0
+29 silly placeDep ROOT vite@ OK for: jaala@1.0.0 want: ^5.0.0
+30 verbose stack Error: request to https://registry.npmjs.org/@vitejs%2fplugin-react failed: cache mode is 'only-if-cached' but no cached response is available.
+30 verbose stack     at cacheFetch (C:\Program Files\nodejs\node_modules\npm\node_modules\make-fetch-happen\lib\cache\index.js:12:13)
+30 verbose stack     at async fetch (C:\Program Files\nodejs\node_modules\npm\node_modules\make-fetch-happen\lib\fetch.js:98:7)
+30 verbose stack     at async RegistryFetcher.packument (C:\Program Files\nodejs\node_modules\npm\node_modules\pacote\lib\registry.js:90:19)
+30 verbose stack     at async RegistryFetcher.manifest (C:\Program Files\nodejs\node_modules\npm\node_modules\pacote\lib\registry.js:128:23)
+30 verbose stack     at async #fetchManifest (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:1202:20)
+30 verbose stack     at async #nodeFromEdge (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:1040:19)
+30 verbose stack     at async #buildDepStep (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:904:11)
+30 verbose stack     at async Arborist.buildIdealTree (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:181:7)
+30 verbose stack     at async Promise.all (index 1)
+30 verbose stack     at async Arborist.reify (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\reify.js:131:5)
+31 error code ENOTCACHED
+32 error request to https://registry.npmjs.org/@vitejs%2fplugin-react failed: cache mode is 'only-if-cached' but no cached response is available.
+33 silly unfinished npm timer reify 1769268021850
+34 silly unfinished npm timer reify:loadTrees 1769268021851
+35 verbose cwd E:\sem3 break\jaala
+36 verbose os Windows_NT 10.0.22631
+37 verbose node v22.19.0
+38 verbose npm  v10.9.3
+39 verbose exit 1
+40 verbose code 1
+41 error A complete log of this run can be found in: E:\sem3 break\jaala\.npm-cache\_logs\2026-01-24T15_20_20_949Z-debug-0.log

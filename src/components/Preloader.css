@@ -1,0 +1,40 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.preloader-bg {
+  position: absolute;
+  inset: 0;
+  background: #000;
+}
+
+.preloader-logo-wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.preloader-logo {
+  width: clamp(120px, 22vw, 200px);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 40px rgba(201, 162, 39, 0.3));
+}
+
+.preloader-tagline {
+  font-family: var(--font-serif);
+  font-size: clamp(0.75rem, 1.5vw, 0.95rem);
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold-muted);
+}
