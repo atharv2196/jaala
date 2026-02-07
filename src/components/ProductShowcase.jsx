@@ -6,21 +6,21 @@ const products = [
         id: 1,
         name: "The Midnight Suit",
         price: "$2,499",
-        image: "/assets/product-suit.png",
+        image: "assets/product-suit.png",
         tag: "Bestseller"
     },
     {
         id: 2,
         name: "Emerald Silk Gown",
         price: "$1,895",
-        image: "/assets/product-dress.png",
+        image: "assets/product-dress.png",
         tag: "New Arrival"
     },
     {
         id: 3,
         name: "Chrono Heritage",
         price: "$5,250",
-        image: "/assets/accessories.png",
+        image: "assets/accessories.png",
         tag: "Limited Edition"
     }
 ]

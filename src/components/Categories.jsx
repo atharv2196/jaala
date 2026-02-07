@@ -6,19 +6,19 @@ const categories = [
     id: 'mens',
     title: 'Mens',
     desc: 'Tailored silhouettes and refined essentials.',
-    image: '/assets/mens.png',
+    image: 'assets/mens.png',
   },
   {
     id: 'womens',
     title: 'Womens',
     desc: 'Effortless drapes and structured separates.',
-    image: '/assets/womens.png',
+    image: 'assets/womens.png',
   },
   {
     id: 'accessories',
     title: 'Accessories',
     desc: 'Leather, silk, and statement pieces.',
-    image: '/assets/accessories.png',
+    image: 'assets/accessories.png',
   },
 ]
 

@@ -10,7 +10,7 @@ export default function Hero() {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.2 }}
           style={{
-            backgroundImage: `url(/assets/hero-bg.png)`,
+            backgroundImage: `url(assets/hero-bg.png)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
