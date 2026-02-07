@@ -1,0 +1,331 @@
+[
+    {
+        "id": 1,
+        "name": "Heritage Silk Blazer",
+        "category": "mens",
+        "price": 45000,
+        "description": "Handcrafted silk blazer featuring subtle Banarasi weave patterns. A perfect blend of Indian craftsmanship and Western tailoring.",
+        "details": "100% Pure Silk | Hand-woven Banarasi accents | Tailored fit | Dry clean only",
+        "images": [
+            "/assets/mens.png"
+        ],
+        "inStock": true,
+        "featured": true,
+        "tags": [
+            "new",
+            "exclusive",
+            "bespoke-available"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Royal Velvet Sherwani",
+        "category": "mens",
+        "price": 65000,
+        "description": "Luxurious velvet sherwani with intricate hand embroidery. Perfect for exclusive events and celebrations.",
+        "details": "Premium Velvet | Hand-embroidered | Custom sizing available | Dry clean only",
+        "images": [
+            "/assets/mens.png"
+        ],
+        "inStock": true,
+        "featured": true,
+        "tags": [
+            "exclusive",
+            "bespoke-available"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Chanderi Silk Dress",
+        "category": "womens",
+        "price": 38000,
+        "description": "Elegant Chanderi silk dress with modern silhouette. Features traditional Indian textile in contemporary design.",
+        "details": "Chanderi Silk | Modern cut | Hand-finished seams | Dry clean only",
+        "images": [
+            "/assets/womens.png"
+        ],
+        "inStock": true,
+        "featured": true,
+        "tags": [
+            "new",
+            "trending"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Embroidered Evening Gown",
+        "category": "womens",
+        "price": 75000,
+        "description": "Stunning evening gown with Zardozi embroidery. A masterpiece of Indian artistry meets haute couture.",
+        "details": "Silk blend | Zardozi hand-embroidery | Bespoke tailoring | Dry clean only",
+        "images": [
+            "/assets/product-dress.png"
+        ],
+        "inStock": true,
+        "featured": true,
+        "tags": [
+            "exclusive",
+            "bespoke-available"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Pashmina Wrap Coat",
+        "category": "womens",
+        "price": 52000,
+        "description": "Luxurious Pashmina wrap coat with minimalist design. Timeless elegance for the discerning woman.",
+        "details": "100% Pashmina | Hand-woven | Lightweight warmth | Dry clean only",
+        "images": [
+            "/assets/womens.png"
+        ],
+        "inStock": true,
+        "featured": false,
+        "tags": [
+            "trending"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Linen Kurta Set",
+        "category": "mens",
+        "price": 28000,
+        "description": "Premium linen kurta with contemporary cut. Perfect for sophisticated casual wear.",
+        "details": "Belgian Linen | Breathable fabric | Modern fit | Machine washable",
+        "images": [
+            "/assets/mens.png"
+        ],
+        "inStock": true,
+        "featured": false,
+        "tags": [
+            "new"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Silk Pocket Square Set",
+        "category": "accessories",
+        "price": 8500,
+        "description": "Set of 3 handcrafted silk pocket squares with traditional Indian motifs.",
+        "details": "Pure Silk | Hand-rolled edges | Gift box included | Dry clean only",
+        "images": [
+            "/assets/accessories.png"
+        ],
+        "inStock": true,
+        "featured": false,
+        "tags": [
+            "gift-ready"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Leather Portfolio Bag",
+        "category": "accessories",
+        "price": 42000,
+        "description": "Handcrafted leather portfolio with brass accents. Sophistication meets functionality.",
+        "details": "Full-grain leather | Brass hardware | Laptop compartment | Lifetime warranty",
+        "images": [
+            "/assets/accessories.png"
+        ],
+        "inStock": true,
+        "featured": true,
+        "tags": [
+            "trending",
+            "exclusive"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Tailored Wool Suit",
+        "category": "mens",
+        "price": 85000,
+        "description": "Bespoke wool suit with impeccable tailoring. The epitome of refined menswear.",
+        "details": "Italian Wool | Made-to-measure | Hand-stitched lapels | Dry clean only",
+        "images": [
+            "/assets/product-suit.png"
+        ],
+        "inStock": true,
+        "featured": true,
+        "tags": [
+            "exclusive",
+            "bespoke-available"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Silk Saree Gown",
+        "category": "womens",
+        "price": 68000,
+        "description": "Innovative saree-gown hybrid. Traditional Kanjeevaram silk in a modern gown silhouette.",
+        "details": "Kanjeevaram Silk | Fusion design | Gold zari work | Dry clean only",
+        "images": [
+            "/assets/womens.png"
+        ],
+        "inStock": true,
+        "featured": true,
+        "tags": [
+            "exclusive",
+            "trending"
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Cashmere Scarf",
+        "category": "accessories",
+        "price": 18000,
+        "description": "Ultra-soft cashmere scarf with hand-embroidered borders. Luxury in every thread.",
+        "details": "100% Cashmere | Hand-embroidered | Lightweight | Dry clean only",
+        "images": [
+            "/assets/accessories.png"
+        ],
+        "inStock": true,
+        "featured": false,
+        "tags": [
+            "gift-ready"
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Nehru Jacket",
+        "category": "mens",
+        "price": 32000,
+        "description": "Contemporary Nehru jacket in premium cotton silk. Modern Indian elegance.",
+        "details": "Cotton Silk blend | Mandarin collar | Slim fit | Dry clean only",
+        "images": [
+            "/assets/mens.png"
+        ],
+        "inStock": true,
+        "featured": false,
+        "tags": [
+            "new"
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Embellished Clutch",
+        "category": "accessories",
+        "price": 22000,
+        "description": "Hand-embellished evening clutch with semi-precious stones. Statement accessory for special occasions.",
+        "details": "Silk base | Stone embellishments | Chain strap | Dust bag included",
+        "images": [
+            "/assets/accessories.png"
+        ],
+        "inStock": true,
+        "featured": false,
+        "tags": [
+            "exclusive"
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Organza Cocktail Dress",
+        "category": "womens",
+        "price": 48000,
+        "description": "Ethereal organza dress with delicate embroidery. Perfect for cocktail events.",
+        "details": "Silk Organza | Hand-embroidered | Fitted bodice | Dry clean only",
+        "images": [
+            "/assets/womens.png"
+        ],
+        "inStock": true,
+        "featured": false,
+        "tags": [
+            "trending"
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Brocade Waistcoat",
+        "category": "mens",
+        "price": 24000,
+        "description": "Luxurious brocade waistcoat with traditional patterns. Adds regal touch to any outfit.",
+        "details": "Silk Brocade | Traditional motifs | Adjustable back | Dry clean only",
+        "images": [
+            "/assets/mens.png"
+        ],
+        "inStock": true,
+        "featured": false,
+        "tags": [
+            "new"
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Leather Monk Strap Shoes",
+        "category": "accessories",
+        "price": 35000,
+        "description": "Handcrafted leather monk strap shoes. Italian craftsmanship meets Indian leather.",
+        "details": "Full-grain leather | Goodyear welt | Leather sole | Shoe bag included",
+        "images": [
+            "/assets/accessories.png"
+        ],
+        "inStock": true,
+        "featured": true,
+        "tags": [
+            "exclusive"
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Anarkali Suit Set",
+        "category": "womens",
+        "price": 55000,
+        "description": "Contemporary Anarkali suit with modern embellishments. Timeless Indian silhouette reimagined.",
+        "details": "Georgette | Mirror work | Dupatta included | Dry clean only",
+        "images": [
+            "/assets/womens.png"
+        ],
+        "inStock": true,
+        "featured": false,
+        "tags": [
+            "trending"
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Silk Bow Tie Collection",
+        "category": "accessories",
+        "price": 12000,
+        "description": "Set of 5 handcrafted silk bow ties. Elevate your formal wear.",
+        "details": "Pure Silk | Pre-tied | Gift box | Dry clean only",
+        "images": [
+            "/assets/accessories.png"
+        ],
+        "inStock": true,
+        "featured": false,
+        "tags": [
+            "gift-ready"
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Trench Coat",
+        "category": "mens",
+        "price": 58000,
+        "description": "Classic trench coat with Indian textile lining. Timeless outerwear with a twist.",
+        "details": "Cotton Gabardine | Ikat lining | Water-resistant | Dry clean only",
+        "images": [
+            "/assets/mens.png"
+        ],
+        "inStock": true,
+        "featured": false,
+        "tags": [
+            "new"
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Silk Palazzo Set",
+        "category": "womens",
+        "price": 42000,
+        "description": "Elegant silk palazzo set with embroidered kurta. Contemporary Indian luxury wear.",
+        "details": "Pure Silk | Hand-embroidered | Comfortable fit | Dry clean only",
+        "images": [
+            "/assets/womens.png"
+        ],
+        "inStock": true,
+        "featured": false,
+        "tags": [
+            "new",
+            "trending"
+        ]
+    }
+]

@@ -33,14 +33,15 @@ body {
 }
 
 /* Custom cursor - hide default when our cursor is active (desktop only) */
-body.cursor-active,
+/* Disabled - using normal cursor */
+/* body.cursor-active,
 body.cursor-active * {
   cursor: none !important;
 }
 
 a, button {
   cursor: none;
-}
+} */
 
 #root {
   min-height: 100vh;

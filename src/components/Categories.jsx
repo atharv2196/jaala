@@ -1,5 +1,6 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 const categories = [
   {
@@ -7,18 +8,21 @@ const categories = [
     title: 'Mens',
     desc: 'Tailored silhouettes and refined essentials.',
     image: 'assets/mens.png',
+    color: '#8B7355',
   },
   {
     id: 'womens',
     title: 'Womens',
     desc: 'Effortless drapes and structured separates.',
     image: 'assets/womens.png',
+    color: '#C9A227',
   },
   {
     id: 'accessories',
     title: 'Accessories',
     desc: 'Leather, silk, and statement pieces.',
     image: 'assets/accessories.png',
+    color: '#D4AF37',
   },
 ]
 
@@ -40,25 +44,26 @@ export default function Categories() {
 
       <div className="categories-grid">
         {categories.map((cat, i) => (
-          <motion.a
+          <motion.div
             key={cat.id}
-            href={`#${cat.id}`}
             className="category-card"
-            data-cursor-hover
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+            style={{ '--category-color': cat.color }}
           >
-            <div className="category-img-container">
-              <img src={cat.image} alt={cat.title} className="category-img" />
-              <div className="category-overlay" />
-            </div>
-            <div className="category-content">
-              <h3 className="category-title">{cat.title}</h3>
-              <p className="category-desc">{cat.desc}</p>
-              <span className="category-arrow">→</span>
-            </div>
-          </motion.a>
+            <Link to={`/products?category=${cat.id}`} className="category-link">
+              <div className="category-img-container">
+                <img src={cat.image} alt={cat.title} className="category-img" />
+                <div className="category-overlay" />
+                <div className="category-color-accent" />
+              </div>
+              <div className="category-content">
+                <h3 className="category-title">{cat.title}</h3>
+                <p className="category-desc">{cat.desc}</p>
+              </div>
+            </Link>
+          </motion.div>
         ))}
       </div>
     </section>

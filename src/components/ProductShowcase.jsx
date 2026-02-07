@@ -7,21 +7,24 @@ const products = [
         name: "The Midnight Suit",
         price: "$2,499",
         image: "assets/product-suit.png",
-        tag: "Bestseller"
+        tag: "Bestseller",
+        category: "mens"
     },
     {
         id: 2,
         name: "Emerald Silk Gown",
         price: "$1,895",
         image: "assets/product-dress.png",
-        tag: "New Arrival"
+        tag: "New Arrival",
+        category: "womens"
     },
     {
         id: 3,
         name: "Chrono Heritage",
         price: "$5,250",
         image: "assets/accessories.png",
-        tag: "Limited Edition"
+        tag: "Limited Edition",
+        category: "accessories"
     }
 ]
 
@@ -52,7 +55,7 @@ export default function ProductShowcase() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: i * 0.1, ease: "easeOut" }}
                         >
-                            <div className="product-img-wrapper">
+                            <div className="product-img-wrapper" data-category={product.category}>
                                 <img src={product.image} alt={product.name} />
                                 <div className="product-overlay">
                                     <button className="btn btn-primary">View Details</button>

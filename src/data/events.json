@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "Jaala Exclusive Fashion Gala 2026",
+        "date": "2026-03-15",
+        "time": "19:00",
+        "location": "The Taj Palace, Mumbai",
+        "description": "Join us for an evening of luxury fashion, networking, and exclusive previews of our Spring/Summer collection.",
+        "image": "/assets/hero-bg.png",
+        "type": "upcoming",
+        "attendees": 45,
+        "maxAttendees": 100,
+        "rsvpRequired": true,
+        "color": "#8B4513"
+    },
+    {
+        "id": 2,
+        "title": "Craftsmanship Workshop",
+        "date": "2026-04-20",
+        "time": "14:00",
+        "location": "Jaala Atelier, Delhi",
+        "description": "Experience the art of Indian textile craftsmanship. Meet our artisans and learn about traditional techniques.",
+        "image": "/assets/heritage-logo.jpg",
+        "type": "upcoming",
+        "attendees": 12,
+        "maxAttendees": 20,
+        "rsvpRequired": true,
+        "color": "#2E5266"
+    },
+    {
+        "id": 3,
+        "title": "Winter Collection Launch 2025",
+        "date": "2025-11-10",
+        "time": "18:30",
+        "location": "The Oberoi, Bangalore",
+        "description": "A spectacular evening showcasing our Winter 2025 collection with live music and fine dining.",
+        "image": "/assets/hero-bg.png",
+        "type": "past",
+        "attendees": 85,
+        "maxAttendees": 85,
+        "rsvpRequired": false,
+        "color": "#6B4423"
+    }
+]

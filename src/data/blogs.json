@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "The Art of Indian Textile in Modern Fashion",
+        "excerpt": "Discover how traditional Indian weaving techniques are being reimagined in contemporary luxury fashion.",
+        "content": "Full blog content here...",
+        "author": "Priya Sharma",
+        "date": "2026-02-01",
+        "category": "Craftsmanship",
+        "image": "/assets/heritage-logo.jpg",
+        "readTime": "5 min",
+        "color": "#9B6B4F"
+    },
+    {
+        "id": 2,
+        "title": "Behind the Scenes: Creating a Bespoke Sherwani",
+        "excerpt": "Follow the journey of a custom sherwani from initial consultation to final fitting.",
+        "content": "Full blog content here...",
+        "author": "Rahul Mehta",
+        "date": "2026-01-25",
+        "category": "Bespoke",
+        "image": "/assets/mens.png",
+        "readTime": "7 min",
+        "color": "#4A5D23"
+    },
+    {
+        "id": 3,
+        "title": "Sustainable Luxury: Our Commitment",
+        "excerpt": "Learn about Jaala's dedication to sustainable practices and ethical sourcing.",
+        "content": "Full blog content here...",
+        "author": "Anjali Verma",
+        "date": "2026-01-15",
+        "category": "Sustainability",
+        "image": "/assets/womens.png",
+        "readTime": "6 min",
+        "color": "#7D5A3B"
+    }
+]
