@@ -44,7 +44,7 @@ export default function Preloader({ onComplete }) {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <motion.img
-              src="assets/logo.png"
+              src="/jaala/assets/logo.png"
               alt="Jaala"
               className="preloader-logo"
               initial={{ opacity: 0, scale: 0.85 }}

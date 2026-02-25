@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -30,6 +31,8 @@ body {
   background: var(--black);
   color: var(--cream);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Custom cursor - hide default when our cursor is active (desktop only) */

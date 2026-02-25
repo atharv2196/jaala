@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ShoppingCart, Bell, User, Menu, X } from 'lucide-react'
 import useAuthStore from '../store/authStore'
@@ -13,6 +13,12 @@ export default function Header() {
   const user = useAuthStore(state => state.user)
   const itemCount = useCartStore(state => state.getItemCount())
   const navigate = useNavigate()
+  const location = useLocation()
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setOpen(false)
+  }, [location.pathname])
 
   return (
     <>
@@ -34,17 +40,17 @@ export default function Header() {
           <Link to="/contact" className="nav-link">Contact</Link>
 
           <div className="header-actions">
-            <button className="icon-btn" onClick={() => setCartOpen(true)}>
+            <button className="icon-btn" onClick={() => setCartOpen(true)} aria-label="Open cart">
               <ShoppingCart size={20} />
               {itemCount > 0 && <span className="badge">{itemCount}</span>}
             </button>
 
             {isAuthenticated ? (
               <>
-                <Link to="/member/notifications" className="icon-btn">
+                <Link to="/member/notifications" className="icon-btn" aria-label="Notifications">
                   <Bell size={20} />
                 </Link>
-                <Link to="/member/profile" className="icon-btn">
+                <Link to="/member/profile" className="icon-btn" aria-label="Profile">
                   <User size={20} />
                 </Link>
               </>
@@ -56,34 +62,57 @@ export default function Header() {
           </div>
         </nav>
 
-        <button
-          type="button"
-          className="header-menu-btn"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="header-mobile-actions">
+          <button
+            type="button"
+            className="icon-btn"
+            onClick={() => setCartOpen(true)}
+            aria-label="Open cart"
+          >
+            <ShoppingCart size={20} />
+            {itemCount > 0 && <span className="badge">{itemCount}</span>}
+          </button>
+          <button
+            type="button"
+            className="header-menu-btn"
+            onClick={() => setOpen(!open)}
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            style={{ position: 'relative', zIndex: open ? 1002 : 'auto' }}
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </motion.header>
 
-        <AnimatePresence>
-          {open && (
-            <motion.div
-              className="header-mobile"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            >
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            className="header-mobile"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <nav className="mobile-nav-links">
               <Link to="/products" onClick={() => setOpen(false)}>Collections</Link>
               <Link to="/about" onClick={() => setOpen(false)}>About Us</Link>
               <Link to="/events" onClick={() => setOpen(false)}>Events</Link>
               <Link to="/blogs" onClick={() => setOpen(false)}>Stories</Link>
               <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
-              {!isAuthenticated && (
-                <Link to="/login" onClick={() => setOpen(false)} style={{ color: 'var(--gold)' }}>Login</Link>
-              )}
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.header>
+            </nav>
+            {!isAuthenticated && (
+              <Link to="/login" onClick={() => setOpen(false)} className="btn btn-primary mobile-login-btn">Login</Link>
+            )}
+            {isAuthenticated && (
+              <div className="mobile-member-links">
+                <Link to="/member/profile" onClick={() => setOpen(false)}>Profile</Link>
+                <Link to="/member/orders" onClick={() => setOpen(false)}>Orders</Link>
+                <Link to="/member/notifications" onClick={() => setOpen(false)}>Notifications</Link>
+              </div>
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} />
     </>

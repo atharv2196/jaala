@@ -7,7 +7,7 @@
         "author": "Priya Sharma",
         "date": "2026-02-01",
         "category": "Craftsmanship",
-        "image": "/assets/heritage-logo.jpg",
+        "image": "/jaala/assets/heritage-logo.jpg",
         "readTime": "5 min",
         "color": "#9B6B4F"
     },
@@ -19,7 +19,7 @@
         "author": "Rahul Mehta",
         "date": "2026-01-25",
         "category": "Bespoke",
-        "image": "/assets/mens.png",
+        "image": "/jaala/assets/mens.png",
         "readTime": "7 min",
         "color": "#4A5D23"
     },
@@ -31,7 +31,7 @@
         "author": "Anjali Verma",
         "date": "2026-01-15",
         "category": "Sustainability",
-        "image": "/assets/womens.png",
+        "image": "/jaala/assets/womens.png",
         "readTime": "6 min",
         "color": "#7D5A3B"
     }

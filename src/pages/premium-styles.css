@@ -60,6 +60,26 @@
     opacity: 1;
 }
 
+@media (hover: none) and (pointer: coarse) {
+    .product-hover-overlay {
+        opacity: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 60%);
+    }
+
+    .product-card.premium-card .product-hover-overlay {
+        opacity: 1;
+    }
+
+    .product-card.premium-card:hover {
+        transform: none;
+    }
+
+    .product-card.premium-card:active {
+        transform: scale(0.98);
+        transition: transform 0.1s;
+    }
+}
+
 .view-details {
     color: var(--gold);
     font-family: var(--font-sans);
@@ -128,11 +148,18 @@
 .add-to-cart-btn {
     width: 100%;
     transition: all 0.3s;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .add-to-cart-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(201, 162, 39, 0.3);
+}
+
+.add-to-cart-btn:active {
+    transform: scale(0.97);
+    box-shadow: none;
 }
 
 /* About Page Styling */

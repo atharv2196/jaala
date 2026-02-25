@@ -1,9 +1,11 @@
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
+import { ArrowLeft } from 'lucide-react'
 import productsData from '../data/products.json'
 import useCartStore from '../store/cartStore'
 
 export default function ProductDetail() {
     const { id } = useParams()
+    const navigate = useNavigate()
     const product = productsData.find(p => p.id === parseInt(id))
     const addItem = useCartStore(state => state.addItem)
 
@@ -12,6 +14,10 @@ export default function ProductDetail() {
     return (
         <section className="page-section">
             <div className="container">
+                <button className="back-btn" onClick={() => navigate(-1)}>
+                    <ArrowLeft size={20} />
+                    <span>Back</span>
+                </button>
                 <div className="product-detail">
                     <div className="product-detail-image">
                         <img src={product.images[0]} alt={product.name} />

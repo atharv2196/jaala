@@ -1,12 +1,22 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
+function isTouchDevice() {
+  return window.matchMedia('(hover: none) and (pointer: coarse)').matches
+}
+
 export default function CustomCursor() {
   const [pos, setPos] = useState({ x: 0, y: 0 })
   const [hover, setHover] = useState(false)
   const [visible, setVisible] = useState(false)
+  const [isTouch, setIsTouch] = useState(false)
 
   useEffect(() => {
+    if (isTouchDevice()) {
+      setIsTouch(true)
+      return
+    }
+
     const move = (e) => {
       setPos({ x: e.clientX, y: e.clientY })
       if (!visible) setVisible(true)
@@ -28,9 +38,7 @@ export default function CustomCursor() {
     document.addEventListener('mouseover', onOver)
     document.addEventListener('mouseout', onOut)
 
-    if (window.matchMedia('(hover: hover)').matches) {
-      document.body.classList.add('cursor-active')
-    }
+    document.body.classList.add('cursor-active')
 
     return () => {
       el.removeEventListener('mousemove', move)
@@ -42,7 +50,7 @@ export default function CustomCursor() {
     }
   }, [visible])
 
-  if (!visible) return null
+  if (isTouch || !visible) return null
 
   const spring = { type: 'spring', stiffness: 500, damping: 28 }
 

@@ -13,7 +13,14 @@
   text-decoration: none;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: color 0.3s, background 0.3s, border-color 0.3s;
+  transition: color 0.3s, background 0.3s, border-color 0.3s, transform 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  min-height: 44px;
+}
+
+.btn:active {
+  transform: scale(0.97);
 }
 
 .btn-primary {
@@ -55,11 +62,23 @@
   color: var(--cream);
   cursor: pointer;
   padding: 0.5rem;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: color 0.3s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .icon-btn:hover {
   color: var(--gold);
+}
+
+.icon-btn:active {
+  color: var(--gold);
+  transform: scale(0.92);
 }
 
 .badge {
@@ -125,6 +144,13 @@
   color: var(--cream);
   cursor: pointer;
   padding: 0.5rem;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .cart-items {
@@ -195,7 +221,18 @@
   border: none;
   color: var(--gold);
   cursor: pointer;
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 0.75rem;
+  min-width: 40px;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.quantity-controls button:active {
+  background: rgba(201, 162, 39, 0.15);
 }
 
 .quantity-controls span {
@@ -209,7 +246,14 @@
   border: none;
   color: var(--gold-muted);
   cursor: pointer;
-  padding: 0.25rem;
+  padding: 0.5rem;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .remove-btn:hover {
@@ -258,6 +302,8 @@
   justify-content: center;
   box-shadow: 0 4px 20px rgba(201, 162, 39, 0.4);
   z-index: 9997;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .chat-window {
@@ -273,6 +319,25 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  .chat-fab {
+    width: 50px;
+    height: 50px;
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .chat-window {
+    right: 0.75rem;
+    left: 0.75rem;
+    bottom: 80px;
+    width: auto;
+    height: calc(100vh - 120px);
+    max-height: 500px;
+    border-radius: 12px;
+  }
 }
 
 .chat-header {
@@ -487,8 +552,34 @@
 
 /* Page Sections */
 .page-section {
-  padding: 6rem 2rem;
+  padding: 7rem 2rem 6rem;
   min-height: 60vh;
+}
+
+/* Back Button */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--gold-muted);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin-bottom: 2rem;
+  transition: color 0.3s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  min-height: 44px;
+}
+
+.back-btn:hover,
+.back-btn:active {
+  color: var(--gold);
 }
 
 .container {
@@ -529,6 +620,9 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  min-height: 44px;
 }
 
 .filter-buttons button:hover,
@@ -536,6 +630,10 @@
   background: var(--gold);
   color: var(--black);
   border-color: var(--gold);
+}
+
+.filter-buttons button:active {
+  transform: scale(0.96);
 }
 
 /* Events & Blogs Grid */
@@ -721,32 +819,111 @@
   display: none;
   background: none;
   border: none;
-  padding: 0.5rem;
+  padding: 0.75rem;
   color: var(--cream);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-mobile-actions {
+  display: none;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .header-mobile {
   display: none;
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: rgba(10, 10, 10, 0.98);
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  z-index: 999;
+  justify-content: flex-start;
+  gap: 0;
+  z-index: 1001;
+  padding: 5rem 2rem 3rem;
+  overflow-y: auto;
 }
 
-.header-mobile a {
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+}
+
+.mobile-nav-links a {
   font-family: var(--font-display);
   font-size: 1.4rem;
   letter-spacing: 0.1em;
   color: var(--cream);
   text-decoration: none;
+  padding: 1rem 2rem;
+  width: 100%;
+  text-align: center;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: color 0.2s, background 0.2s;
 }
 
-.header-mobile a:hover {
+.mobile-nav-links a:hover,
+.mobile-nav-links a:active {
+  color: var(--gold);
+  background: rgba(201, 162, 39, 0.08);
+}
+
+.mobile-login-btn {
+  margin-top: 1.5rem;
+  min-width: 200px;
+  text-align: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.mobile-member-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(201, 162, 39, 0.15);
+}
+
+.mobile-member-links a {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-muted);
+  text-decoration: none;
+  padding: 0.85rem 2rem;
+  width: 100%;
+  text-align: center;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: color 0.2s;
+}
+
+.mobile-member-links a:active {
   color: var(--gold);
 }
 
@@ -755,8 +932,12 @@
     display: none;
   }
 
+  .header-mobile-actions {
+    display: flex;
+  }
+
   .header-menu-btn {
-    display: block;
+    display: flex;
   }
 
   .header-mobile {
@@ -1385,8 +1566,15 @@
   display: none;
   background: none;
   border: none;
-  padding: 0.5rem;
+  padding: 0.75rem;
   color: var(--cream);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu-icon {
@@ -1418,13 +1606,18 @@
 .header-mobile {
   display: none;
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: rgba(10, 10, 10, 0.98);
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  z-index: 999;
+  justify-content: flex-start;
+  gap: 0;
+  z-index: 1001;
+  padding: 5rem 2rem 3rem;
+  overflow-y: auto;
 }
 
 .header-mobile a {
@@ -1433,10 +1626,20 @@
   letter-spacing: 0.1em;
   color: var(--cream);
   text-decoration: none;
+  padding: 1rem 2rem;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: color 0.2s, background 0.2s;
 }
 
-.header-mobile a:hover {
+.header-mobile a:hover,
+.header-mobile a:active {
   color: var(--gold);
+  background: rgba(201, 162, 39, 0.08);
 }
 
 @media (max-width: 768px) {
@@ -1444,8 +1647,12 @@
     display: none;
   }
 
+  .header-mobile-actions {
+    display: flex;
+  }
+
   .header-menu-btn {
-    display: block;
+    display: flex;
   }
 
   .header-mobile {
@@ -1975,5 +2182,171 @@
 @media (max-width: 600px) {
   .products-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   MOBILE TOUCH & EXPERIENCE ENHANCEMENTS
+   ========================================== */
+
+/* Touch-friendly category cards */
+@media (hover: none) and (pointer: coarse) {
+  .category-desc {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .category-title {
+    transform: translateY(0);
+  }
+
+  .category-color-accent {
+    opacity: 1;
+  }
+
+  .category-card:active {
+    transform: scale(0.98);
+    transition: transform 0.1s;
+  }
+
+  /* Product showcase overlay always visible on mobile */
+  .product-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 50%);
+  }
+
+  .product-overlay .btn {
+    font-size: 0.7rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  /* Event and blog cards active state */
+  .event-card:active,
+  .blog-card:active {
+    transform: scale(0.98);
+    transition: transform 0.1s;
+  }
+
+  /* Disable desktop hover transforms on mobile */
+  .event-card:hover,
+  .blog-card:hover {
+    transform: none;
+  }
+}
+
+/* Smooth link transitions */
+a {
+  transition: color 0.25s ease;
+}
+
+/* Focus-visible for accessibility */
+.btn:focus-visible,
+.icon-btn:focus-visible,
+.filter-buttons button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Smoother scroll sections on mobile */
+@media (max-width: 768px) {
+  .page-section {
+    padding: 6rem 1.25rem 4rem;
+  }
+
+  .hero {
+    padding: 5rem 1.25rem 3rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .our-story {
+    padding: 4rem 1.25rem;
+  }
+
+  .categories {
+    padding: 4rem 1.25rem;
+  }
+
+  .product-showcase {
+    padding: 4rem 1.25rem;
+  }
+
+  .contact {
+    padding: 6rem 1.25rem 4rem;
+  }
+
+  .footer-nav {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 10vw, 3.5rem);
+  }
+}
+
+/* Very small screens */
+@media (max-width: 375px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
+  .categories-grid {
+    gap: 1rem;
+  }
+
+  .products-grid {
+    gap: 1rem;
+  }
+}
+
+/* Smooth image loading */
+img {
+  transition: opacity 0.4s ease;
+}
+
+/* Chat input fix - prevents zoom on iOS */
+@media (max-width: 480px) {
+  .chat-input {
+    padding: 0.75rem;
+  }
+
+  .chat-input input {
+    font-size: 16px;
+  }
+}
+
+/* Cart drawer mobile full width */
+@media (max-width: 480px) {
+  .cart-drawer {
+    max-width: 100%;
+  }
+
+  .cart-header {
+    padding: 1rem;
+  }
+
+  .cart-items {
+    padding: 1rem;
+  }
+
+  .cart-footer {
+    padding: 1rem;
   }
 }
