@@ -44,7 +44,7 @@ export default function App() {
   const onPreloadComplete = useCallback(() => setLoaded(true), [])
 
   return (
-    <BrowserRouter basename="/jaala">
+    <BrowserRouter>
       <ScrollToTop />
       <Preloader onComplete={onPreloadComplete} />
       {loaded && (
