@@ -6,7 +6,7 @@ export default function Hero() {
 
   useEffect(() => {
     const img = new Image()
-    img.src = '/assets/hero-bg.png'
+    img.src = '/assets/hero-bg.webp'
     if (img.complete) {
       setImgLoaded(true)
     } else {
