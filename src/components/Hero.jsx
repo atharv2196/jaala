@@ -6,7 +6,7 @@ export default function Hero() {
 
   useEffect(() => {
     const img = new Image()
-    img.src = '/jaala/assets/hero-bg.png'
+    img.src = '/assets/hero-bg.png'
     if (img.complete) {
       setImgLoaded(true)
     } else {
@@ -23,7 +23,7 @@ export default function Hero() {
           animate={{ scale: 1, opacity: imgLoaded ? 1 : 0 }}
           transition={{ duration: 1.2 }}
           style={{
-            backgroundImage: `url(/jaala/assets/hero-bg.png)`,
+            backgroundImage: `url(/assets/hero-bg.png)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

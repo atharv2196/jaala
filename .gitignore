@@ -27,3 +27,4 @@ dist-ssr
 .cache
 node_modules/.cache
 node_modules/.vite
+.vercel

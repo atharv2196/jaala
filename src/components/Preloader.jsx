@@ -6,11 +6,11 @@ const EXIT_MS = 600
 
 // Preload hero background and other critical images during the preloader phase
 const imagesToPreload = [
-  '/jaala/assets/hero-bg.png',
-  '/jaala/assets/heritage-logo.jpg',
-  '/jaala/assets/mens.png',
-  '/jaala/assets/womens.png',
-  '/jaala/assets/accessories.png',
+  '/assets/hero-bg.png',
+  '/assets/heritage-logo.jpg',
+  '/assets/mens.png',
+  '/assets/womens.png',
+  '/assets/accessories.png',
 ]
 
 function preloadImages(urls) {
@@ -63,7 +63,7 @@ export default function Preloader({ onComplete }) {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <motion.img
-              src="/jaala/assets/logo.png"
+              src="/assets/logo.png"
               alt="Jaala"
               className="preloader-logo"
               initial={{ opacity: 0, scale: 0.85 }}

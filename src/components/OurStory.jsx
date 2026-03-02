@@ -15,7 +15,7 @@ export default function OurStory() {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="story-img-container" style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img src="/jaala/assets/heritage-logo.jpg" alt="Jaala Heritage" loading="lazy" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+            <img src="/assets/heritage-logo.jpg" alt="Jaala Heritage" loading="lazy" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
           </div>
         </motion.div>
 
