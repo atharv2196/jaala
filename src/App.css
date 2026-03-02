@@ -650,12 +650,13 @@
   border: 1px solid rgba(201, 162, 39, 0.1);
   overflow: hidden;
   text-decoration: none;
-  transition: transform 0.3s;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateZ(0);
 }
 
 .event-card:hover,
 .blog-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px) translateZ(0);
 }
 
 .event-img-wrapper,
@@ -672,13 +673,14 @@
   height: 100%;
   object-fit: cover;
   opacity: 0.8;
-  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.25s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateZ(0);
 }
 
 .event-card:hover img,
 .blog-card:hover img {
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.08) translateZ(0);
 }
 
 .event-info,
@@ -1174,7 +1176,7 @@
   background: var(--category-color, var(--gold));
   z-index: 4;
   opacity: 0;
-  transition: opacity 0.4s, height 0.4s;
+  transition: opacity 0.3s ease, height 0.3s ease;
 }
 
 .category-card:hover .category-color-accent {
@@ -1199,7 +1201,7 @@
   color: var(--cream);
   margin-bottom: 0.5rem;
   transform: translateY(10px);
-  transition: transform 0.4s, color 0.4s;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), color 0.3s ease;
 }
 
 .category-card:hover .category-title {
@@ -1213,7 +1215,7 @@
   color: var(--gold-muted);
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.4s 0.1s, transform 0.4s 0.1s;
+  transition: opacity 0.3s 0.05s ease, transform 0.35s 0.05s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .category-card:hover .category-desc {
@@ -1425,12 +1427,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
   opacity: 0.9;
+  transform: translateZ(0);
 }
 
 .product-card:hover .product-img-wrapper img {
-  transform: scale(1.05);
+  transform: scale(1.08) translateZ(0);
   opacity: 1;
 }
 
@@ -2119,11 +2122,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateZ(0);
 }
 
 .product-card:hover .product-img-wrapper img {
-  transform: scale(1.05);
+  transform: scale(1.08) translateZ(0);
 }
 
 .product-overlay {
@@ -2352,22 +2356,12 @@ img {
 }
 
 /* ── Image loading optimization ── */
-img[loading="lazy"] {
-  opacity: 0;
-  transition: opacity 0.4s ease-in;
-}
-
-img[loading="lazy"].loaded,
-img[loading="lazy"][complete] {
-  opacity: 1;
-}
-
-/* Immediate display for images that are already cached */
-img[loading="lazy"] {
-  animation: imgFadeIn 0.4s ease-in forwards;
-}
-
-@keyframes imgFadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* GPU-accelerated transforms for smooth hover effects */
+.category-img,
+.product-img-wrapper img,
+.event-card img,
+.blog-card img {
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
