@@ -1,13 +1,26 @@
 import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
 
 export default function Hero() {
+  const [imgLoaded, setImgLoaded] = useState(false)
+
+  useEffect(() => {
+    const img = new Image()
+    img.src = '/jaala/assets/hero-bg.png'
+    if (img.complete) {
+      setImgLoaded(true)
+    } else {
+      img.onload = () => setImgLoaded(true)
+    }
+  }, [])
+
   return (
     <section className="hero">
       <div className="hero-bg">
         <motion.div
           className="hero-bg-img"
           initial={{ scale: 1.1, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
+          animate={{ scale: 1, opacity: imgLoaded ? 1 : 0 }}
           transition={{ duration: 1.2 }}
           style={{
             backgroundImage: `url(/jaala/assets/hero-bg.png)`,

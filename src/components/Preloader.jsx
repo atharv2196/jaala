@@ -4,11 +4,30 @@ import { motion, AnimatePresence } from 'framer-motion'
 const LOGO_MS = 3200
 const EXIT_MS = 600
 
+// Preload hero background and other critical images during the preloader phase
+const imagesToPreload = [
+  '/jaala/assets/hero-bg.png',
+  '/jaala/assets/heritage-logo.jpg',
+  '/jaala/assets/mens.png',
+  '/jaala/assets/womens.png',
+  '/jaala/assets/accessories.png',
+]
+
+function preloadImages(urls) {
+  urls.forEach(url => {
+    const img = new Image()
+    img.src = url
+  })
+}
+
 export default function Preloader({ onComplete }) {
   const [phase, setPhase] = useState('black')
   const [exiting, setExiting] = useState(false)
 
   useEffect(() => {
+    // Start preloading other images while the preloader is showing
+    preloadImages(imagesToPreload)
+
     const t1 = setTimeout(() => setPhase('logo'), 400)
     const t2 = setTimeout(() => setPhase('exit'), LOGO_MS - EXIT_MS)
     const t3 = setTimeout(() => setExiting(true), LOGO_MS)

@@ -19,7 +19,7 @@ export default function BlogPost() {
                 <article className="blog-post">
                     <h1>{blog.title}</h1>
                     <p className="blog-meta">{blog.author} • {blog.date} • {blog.readTime}</p>
-                    <img src={blog.image} alt={blog.title} />
+                    <img src={blog.image} alt={blog.title} loading="lazy" />
                     <div className="blog-content">
                         <p>{blog.content}</p>
                     </div>

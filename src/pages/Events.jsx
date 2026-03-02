@@ -9,7 +9,7 @@ export default function Events() {
                     {eventsData.map(event => (
                         <div key={event.id} className="event-card">
                             <div className="event-img-wrapper" style={{ background: `linear-gradient(135deg, ${event.color} 0%, ${event.color}dd 100%)` }}>
-                                <img src={event.image} alt={event.title} />
+                                <img src={event.image} alt={event.title} loading="lazy" />
                             </div>
                             <div className="event-info">
                                 <h3>{event.title}</h3>

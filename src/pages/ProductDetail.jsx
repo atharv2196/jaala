@@ -20,7 +20,7 @@ export default function ProductDetail() {
                 </button>
                 <div className="product-detail">
                     <div className="product-detail-image">
-                        <img src={product.images[0]} alt={product.name} />
+                        <img src={product.images[0]} alt={product.name} loading="lazy" />
                     </div>
                     <div className="product-detail-info">
                         <h1>{product.name}</h1>

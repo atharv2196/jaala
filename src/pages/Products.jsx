@@ -54,7 +54,7 @@ export default function Products() {
                                     className="product-img-wrapper premium-img"
                                     style={{ background: `linear-gradient(135deg, ${productColor} 0%, ${productColor}cc 100%)` }}
                                 >
-                                    <img src={product.images[0]} alt={product.name} />
+                                    <img src={product.images[0]} alt={product.name} loading="lazy" />
                                     {product.tags?.includes('new') && <span className="product-tag new-tag">New</span>}
                                     {product.tags?.includes('exclusive') && <span className="product-tag exclusive-tag">Exclusive</span>}
                                     <div className="product-hover-overlay">

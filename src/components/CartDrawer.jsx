@@ -47,7 +47,7 @@ export default function CartDrawer({ open, onClose }) {
                             ) : (
                                 items.map(item => (
                                     <div key={item.id} className="cart-item">
-                                        <img src={item.images[0]} alt={item.name} />
+                                        <img src={item.images[0]} alt={item.name} loading="lazy" />
                                         <div className="cart-item-details">
                                             <h4>{item.name}</h4>
                                             <p className="cart-item-price">₹{item.price.toLocaleString('en-IN')}</p>

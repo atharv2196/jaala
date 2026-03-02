@@ -10,7 +10,7 @@ export default function Blogs() {
                     {blogsData.map(blog => (
                         <Link key={blog.id} to={`/blogs/${blog.id}`} className="blog-card">
                             <div className="blog-img-wrapper" style={{ background: `linear-gradient(135deg, ${blog.color} 0%, ${blog.color}dd 100%)` }}>
-                                <img src={blog.image} alt={blog.title} />
+                                <img src={blog.image} alt={blog.title} loading="lazy" />
                             </div>
                             <div className="blog-info">
                                 <h3>{blog.title}</h3>

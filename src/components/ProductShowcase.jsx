@@ -56,7 +56,7 @@ export default function ProductShowcase() {
                             transition={{ duration: 0.8, delay: i * 0.1, ease: "easeOut" }}
                         >
                             <div className="product-img-wrapper" data-category={product.category}>
-                                <img src={product.image} alt={product.name} />
+                                <img src={product.image} alt={product.name} loading="lazy" />
                                 <div className="product-overlay">
                                     <button className="btn btn-primary">View Details</button>
                                 </div>

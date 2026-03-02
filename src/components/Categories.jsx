@@ -54,7 +54,7 @@ export default function Categories() {
           >
             <Link to={`/products?category=${cat.id}`} className="category-link">
               <div className="category-img-container">
-                <img src={cat.image} alt={cat.title} className="category-img" />
+                <img src={cat.image} alt={cat.title} className="category-img" loading="lazy" />
                 <div className="category-overlay" />
                 <div className="category-color-accent" />
               </div>

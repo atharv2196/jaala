@@ -2350,3 +2350,24 @@ img {
     padding: 1rem;
   }
 }
+
+/* ── Image loading optimization ── */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+img[loading="lazy"].loaded,
+img[loading="lazy"][complete] {
+  opacity: 1;
+}
+
+/* Immediate display for images that are already cached */
+img[loading="lazy"] {
+  animation: imgFadeIn 0.4s ease-in forwards;
+}
+
+@keyframes imgFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
